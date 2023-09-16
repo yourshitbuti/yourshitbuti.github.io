@@ -1,14 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<script>
-function redirect() {
-  window.location.href = "https://youtu.be/1rCMUQImQ5c"; // change this to your desired link
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Redirecting...</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1c1c1c;
+            color: #e2e2e2;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://th.bing.com/th/id/OIP.gRG-1Gpx51FgMb0yDcCZxQAAAA?pid=ImgDet&rs=1');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1, h2, p {
+            opacity: 0;
+            transform: translateY(30px);
+            animation-fill-mode: forwards;
+        }
+
+        h1 {
+            animation: fadeInUp 1.5s 0.5s forwards;
+        }
+
+        h2 {
+            animation: fadeInUp 1.5s 1s forwards;
+        }
+
+        p {
+            animation: fadeInUp 1.5s 1.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        function redirect() {
+            window.location.href = "https://youtu.be/1rCMUQImQ5c"; 
+        }
+    </script>
 </head>
-<body onload="setTimeout(redirect, 3000);">
-<h1>Thanks for clicking ;-). Wait for 5 seconds.. Meanwhile read this !</h1>
-  <h2>Its a secret.</h2>
-  <p><b>Lalith is happy :-). And if you give your construcitive criticism / tips he will be much happier. Just DM him :-)</b></p>
+
+<body onload="setTimeout(redirect, 5000);">
+    <h1>Thanks for clicking ;-). Wait for 5 seconds.. Meanwhile read this !</h1>
+    <h2>It's a secret.</h2>
+    <p><b>Lalith is happy :-). And if you give your constructive criticism / tips he will be much happier. Just DM him :-)</b></p>
 </body>
+
 </html>
