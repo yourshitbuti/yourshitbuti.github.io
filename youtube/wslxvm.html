@@ -67,15 +67,16 @@
 
     <script>
         function redirect() {
+          var linkk = "https://www.youtube.com/watch?v=1rCMUQImQ5c";
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
             if (isMobile) {
-                window.location.href = "vnd.youtube://youtu.be/1rCMUQImQ5c";
+                window.location.href =linkk;
                 setTimeout(() => {
-                    window.location.href = "https://youtu.be/1rCMUQImQ5c";
+                    window.location.href = linkk;
                 }, 2000);
             } else {
-                window.location.href = "https://youtu.be/1rCMUQImQ5c";
+                window.location.href = linkk;
             }
         }
     </script>
