@@ -28,7 +28,7 @@
             box-sizing: border-box;
         }
 
-        h1, h2, p {
+        h1, h2, p, .redirect-button {
             opacity: 0;
             transform: translateY(30px);
             animation-fill-mode: forwards;
@@ -46,6 +46,17 @@
             animation: fadeInUp 1.5s 3.5s forwards;
         }
 
+        .redirect-button {
+            animation: fadeInUp 1.5s 5s forwards;
+            padding: 10px 20px;
+            background-color: #555;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #FFF;
+            font-size: 1.2rem;
+        }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -56,28 +67,25 @@
 
     <script>
         function redirect() {
-    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    if (isMobile) {
-      
-        window.location.href = "vnd.youtube://youtu.be/1rCMUQImQ5c";
-        
-        setTimeout(() => {
-            
-            window.location.href = "https://youtu.be/1rCMUQImQ5c";
-        }, 2000);
-    } else {
-        window.location.href = "https://youtu.be/1rCMUQImQ5c";
-    }
-}
-
+            if (isMobile) {
+                window.location.href = "vnd.youtube://youtu.be/1rCMUQImQ5c";
+                setTimeout(() => {
+                    window.location.href = "https://youtu.be/1rCMUQImQ5c";
+                }, 2000);
+            } else {
+                window.location.href = "https://youtu.be/1rCMUQImQ5c";
+            }
+        }
     </script>
 </head>
 
-<body onload="setTimeout(redirect, 9000);">
-    <h1>Thanks for clicking ;-). Wait for 9 seconds.. Meanwhile read this !</h1>
-    <h2>Lalith is happy :-) becoz you have clicked this link</h2>
+<body>
+    <h1>Thanks for clicking ;-)</h1>
+    <h2>Lalith is happy :-) because you have clicked this link</h2>
     <p><b>Remember .. He Needs you! </b>  Please give your constructive criticism / tips he will be much happier. Just DM him :-)</p>
+    <button class="redirect-button" onclick="redirect()">Redirect to YouTube</button>
 </body>
 
 </html>
